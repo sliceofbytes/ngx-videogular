@@ -108,7 +108,7 @@ export class VgMedia implements OnInit, OnDestroy, IPlayable {
       endAds: fromEvent(this.elem as any, VgEvents.VG_END_ADS),
 
       // See changes on <source> child elements to reload the video file
-      mutation: Observable.create(
+      mutation: new Observable(
         (observer: any) => {
 
           const domObs = new MutationObserver((mutations) => {

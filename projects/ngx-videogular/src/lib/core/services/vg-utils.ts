@@ -28,7 +28,9 @@ export class VgUtils {
 
   // Very simple mobile detection, not 100% reliable
   static isMobileDevice() {
+  /* tslint:disable */
     return (typeof window.orientation !== 'undefined') || (navigator.userAgent.indexOf('IEMobile') !== -1);
+  /*tslint-enable */
   }
 
   static isiOSDevice() {

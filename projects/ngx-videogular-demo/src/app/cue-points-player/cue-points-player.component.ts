@@ -22,6 +22,7 @@ export interface IWikiCue {
 }
 
 // tslint:disable:max-line-length
+// tslint:disable:ban-types
 @Component({
     selector: 'app-cue-points-player',
     templateUrl: './cue-points-player.component.html',
