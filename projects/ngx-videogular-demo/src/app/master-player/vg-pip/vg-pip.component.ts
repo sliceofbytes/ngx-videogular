@@ -2,7 +2,6 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { ICamera } from '../master-player.component';
 
 // tslint:disable:component-selector
-// tslint:disable:no-output-on-prefix
 @Component({
     selector: 'vg-pip',
     templateUrl: './vg-pip.component.html',

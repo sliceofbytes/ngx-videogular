@@ -33,7 +33,7 @@ import { BitrateOption } from '../../core/vg-core.module';
                     [attr.aria-valuetext]="ariaValue">
                 <option
                     *ngFor="let bitrate of bitrates"
-                    [value]="bitrate.qualityIndex"
+                    [value]="bitrate.qualityIndex.toString()"
                     [selected]="bitrate.qualityIndex === bitrateSelected?.qualityIndex">
                     {{ bitrate.label }}
                 </option>
@@ -109,7 +109,7 @@ export class VgQualitySelector implements OnInit, OnChanges, OnDestroy {
 
   subscriptions: Subscription[] = [];
 
-  ariaValue: string;
+  ariaValue: string | number;
 
   constructor(ref: ElementRef, public API: VgAPI) {
     this.elem = ref.nativeElement;
@@ -120,7 +120,7 @@ export class VgQualitySelector implements OnInit, OnChanges, OnDestroy {
 
   ngOnChanges(changes: SimpleChanges) {
     if (changes['bitrates'].currentValue && changes['bitrates'].currentValue.length) {
-      this.bitrates.forEach(item => item.label = item.label || Math.round(item.bitrate / 1000).toString());
+      this.bitrates.forEach(item => item.label = (item.label || Math.round(item.bitrate / 1000)).toString());
     }
   }
 

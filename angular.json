@@ -57,7 +57,7 @@
             "main": "projects/ngx-videogular-demo/src/main.ts",
             "polyfills": "projects/ngx-videogular-demo/src/polyfills.ts",
             "tsConfig": "projects/ngx-videogular-demo/tsconfig.app.json",
-            "aot": false,
+            "aot": true,
             "assets": [
               "projects/ngx-videogular-demo/src/favicon.ico",
               "projects/ngx-videogular-demo/src/assets"
@@ -180,7 +180,7 @@
             "main": "projects/ngx-videogular-docs/src/main.ts",
             "polyfills": "projects/ngx-videogular-docs/src/polyfills.ts",
             "tsConfig": "projects/ngx-videogular-docs/tsconfig.app.json",
-            "aot": false,
+            "aot": true,
             "assets": [
               "projects/ngx-videogular-docs/src/favicon.ico",
               "projects/ngx-videogular-docs/src/assets"

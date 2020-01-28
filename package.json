@@ -3,26 +3,10 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "npm run build:lib && ng serve ngx-videogular-demo",
-    "start:coverage-server": "http-server -c-1 -o -p 9875 ./coverage",
-    "prebuild": "npm run clean",
-    "clean": "rimraf -rf ./dist && rimraf -rf ./coverage",
-    "commit": "git-cz",
-    "coverage": "http-server -c-1 -o -p 9875 ./coverage",
-    "build:travis": "ng build && cp -r ./projects/ngx-videogular/src/fonts ./dist/ngx-videogular",
-    "postbuild:travis": "npm run test",
+    "start": "ng serve",
     "build": "ng build && cp -r ./projects/ngx-videogular/src/fonts ./dist/ngx-videogular",
-    "build:lib": "ng build ngx-videogular && cp -r ./projects/ngx-videogular/src/fonts ./dist/ngx-videogular",
-    "build:demo": "ng build ngx-videogular-demo",
-    "build:docs": "ng build ngx-videogular-docs",
-    "test": "ng test ngx-videogular --karmaConfig=projects/ngx-videogular/karma.conf.js --code-coverage",
-    "test:demo": "ng test ngx-videogular-demo --code-coverage",
-    "test:docs": "ng test ngx-videogular-docs --code-coverage",
+    "test": "ng test",
     "lint": "ng lint",
-    "lint:lib": "ng lint ngx-videogular --fix",
-    "lint:demo": "ng lint ngx-videogular-demo --fix",
-    "lint:docs": "ng lint ngx-videogular-docs --fix",
-    "semantic-release": "semantic-release pre && npm publish && semantic-release post",
     "e2e": "ng e2e"
   },
   "private": true,
@@ -36,7 +20,7 @@
     "@angular/platform-browser-dynamic": "~8.2.14",
     "@angular/router": "~8.2.14",
     "angulartics2": "^8.3.0",
-    "rxjs": "~6.5.4",
+    "rxjs": "~6.4.0",
     "tslib": "^1.10.0",
     "zone.js": "~0.9.1"
   },
@@ -46,71 +30,22 @@
     "@angular/cli": "~8.3.23",
     "@angular/compiler-cli": "~8.2.14",
     "@angular/language-service": "~8.2.14",
+    "@types/node": "~8.9.4",
     "@types/jasmine": "~3.3.8",
     "@types/jasminewd2": "~2.0.3",
-    "@types/node": "~8.9.4",
-    "codelyzer": "^5.1.0",
-    "commitizen": "4.0.3",
-    "cz-conventional-changelog": "^3.1.0",
-    "husky": "^4.2.1",
-    "jasmine-core": "~3.5.0",
+    "codelyzer": "^5.0.0",
+    "jasmine-core": "~3.4.0",
     "jasmine-spec-reporter": "~4.2.1",
     "karma": "~4.1.0",
-    "karma-chrome-launcher": "^2.2.0",
-    "karma-coverage": "^2.0.1",
+    "karma-chrome-launcher": "~2.2.0",
     "karma-coverage-istanbul-reporter": "~2.0.1",
-    "karma-firefox-launcher": "^1.3.0",
-    "karma-jasmine": "~3.1.0",
-    "karma-jasmine-html-reporter": "^1.5.1",
-    "karma-spec-reporter": "0.0.32",
+    "karma-jasmine": "~2.0.1",
+    "karma-jasmine-html-reporter": "^1.4.0",
     "ng-packagr": "^5.4.0",
     "protractor": "~5.4.0",
-    "remap-istanbul": "^0.13.0",
-    "rimraf": "^3.0.1",
     "ts-node": "~7.0.0",
     "tsickle": "^0.37.0",
     "tslint": "~5.15.0",
-    "typescript": "~3.5.3",
-    "validate-commit-message": "^3.0.1"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "npm test",
-      "commit-msg": "validate-commit-msg"
-    }
-  },
-  "config": {
-    "commitizen": {
-      "path": "node_modules/cz-conventional-changelog"
-    },
-    "validate-commit-msg": {
-      "types": [
-        "feat",
-        "fix",
-        "docs",
-        "style",
-        "refactor",
-        "perf",
-        "test",
-        "chore",
-        "revert",
-        "ci"
-      ],
-      "scope": {
-        "required": true,
-        "allowed": [
-          "*"
-        ],
-        "validate": true,
-        "multiple": false
-      },
-      "warnOnFail": false,
-      "maxSubjectLength": 100,
-      "subjectPattern": ".+",
-      "subjectPatternErrorMsg": "subject does not match subject pattern!",
-      "helpMessage": "",
-      "autoFix": false
-    }
-  },
-  "homepage": "http://videogular.com"
+    "typescript": "~3.5.3"
+  }
 }

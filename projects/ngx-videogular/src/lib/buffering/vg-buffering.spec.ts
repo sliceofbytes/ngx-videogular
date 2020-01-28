@@ -1,5 +1,5 @@
 import { VgBuffering } from './vg-buffering';
-import { VgAPI } from '../core/services/vg-api';
+import { VgAPI } from '../core';
 import { ElementRef } from '@angular/core';
 
 describe('Buffering', () => {
