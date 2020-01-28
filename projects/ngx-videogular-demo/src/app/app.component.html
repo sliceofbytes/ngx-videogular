@@ -1,0 +1,21 @@
+<aside>
+    <img class="logo" src="assets/images/videogular.png">
+
+    <ul class="menu">
+        <li routerLink="simple-player" [routerLinkActive]="['is-active']">Simple Player</li>
+        <li routerLink="single-player" [routerLinkActive]="['is-active']">Single Player</li>
+        <li routerLink="audio-player" [routerLinkActive]="['is-active']">Audio Player</li>
+        <li routerLink="bound-player" [routerLinkActive]="['is-active']">Bound Player</li>
+        <li routerLink="multiple-players" [routerLinkActive]="['is-active']">Multiple Players</li>
+        <li routerLink="cue-points-player" [routerLinkActive]="['is-active']">Cue Points Player</li>
+        <li routerLink="google-ima-player" [routerLinkActive]="['is-active']">Google IMA Player</li>
+        <li routerLink="master-player" [routerLinkActive]="['is-active']">Master Player</li>
+        <li routerLink="streaming-player" [routerLinkActive]="['is-active']">DASH & HLS Player</li>
+        <li routerLink="custom-media" [routerLinkActive]="['is-active']">Custom Media Element</li>
+        <li routerLink="smart-playlist" [routerLinkActive]="['is-active']">Video Playlist</li>
+    </ul>
+</aside>
+
+<section class="player-container">
+    <router-outlet></router-outlet>
+</section>

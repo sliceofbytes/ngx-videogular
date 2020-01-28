@@ -1,0 +1,21 @@
+#demo-player {
+    width: 100%;
+    height: calc(100% - 90px);
+}
+#companion-ad {
+    text-align: center;
+    width: 100%;
+    height: 90px;
+}
+.skip-button {
+    display: block;
+    position: absolute;
+    color: white;
+    cursor: pointer;
+    z-index: 1000;
+    font-family: sans-serif;
+    top: 10px;
+    left: 10px;
+    background-color: black;
+    padding: 10px;
+}

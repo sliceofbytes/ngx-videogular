@@ -1,0 +1,40 @@
+<vg-player id="demo-player">
+    <vg-ima-ads
+        [vgCompanion]="'companion-ad'"
+        [vgCompanionSize]="[728, 90]"
+        [vgNetwork]="'6062'"
+        [vgUnitPath]="'iab_vast_samples'"
+        [vgAdTagUrl]="'https://pubads.g.doubleclick.net/gampad/ads?sz=640x480&iu=/124319096/external/single_ad_samples&ciu_szs=300x250&impl=s&gdfp_req=1&env=vp&output=vast&unviewed_position_start=1&cust_params=deployment%3Ddevsite%26sample_ct%3Dskippablelinear&correlator='"
+        [vgSkipButton]="'.skip-button'">
+    </vg-ima-ads>
+
+    <vg-overlay-play></vg-overlay-play>
+
+    <vg-scrub-bar>
+        <vg-scrub-bar-current-time></vg-scrub-bar-current-time>
+        <vg-scrub-bar-buffering-time></vg-scrub-bar-buffering-time>
+    </vg-scrub-bar>
+
+    <vg-controls>
+        <vg-play-pause></vg-play-pause>
+        <vg-playback-button></vg-playback-button>
+
+        <vg-time-display vgProperty="current" vgFormat="mm:ss"></vg-time-display>
+
+        <vg-scrub-bar style="pointer-events: none;"></vg-scrub-bar>
+
+        <vg-time-display vgProperty="left" vgFormat="mm:ss"></vg-time-display>
+        <vg-time-display vgProperty="total" vgFormat="mm:ss"></vg-time-display>
+
+        <vg-mute></vg-mute>
+        <vg-volume></vg-volume>
+
+        <vg-fullscreen></vg-fullscreen>
+    </vg-controls>
+
+    <video #media [vgMedia]="media" id="singleVideo" preload="auto">
+        <source *ngFor="let video of sources" [src]="video.src" [type]="video.type">
+    </video>
+</vg-player>
+<div class='skip-button'>custom skip ad button</div>
+<div id="companion-ad"></div>

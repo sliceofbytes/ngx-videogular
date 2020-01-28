@@ -1,0 +1,43 @@
+<vg-player (onPlayerReady)="onPlayerReady($event)">
+    <div class="title" [ngClass]="{ 'hide': media?.state === 'playing' }">
+        Thanks to <a href="http://ign.com" target="_blank">IGN</a> for the video sources!
+    </div>
+
+    <vg-controls>
+        <vg-play-pause></vg-play-pause>
+        <vg-scrub-bar>
+            <vg-scrub-bar-current-time></vg-scrub-bar-current-time>
+        </vg-scrub-bar>
+
+        <div class="cam-selector-container">
+            <div class="cam-selected">CAM</div>
+
+            <select class="camera-selector" [(ngModel)]="selectedCamera.id" (change)="onSelectCamera($event.target.value)">
+                <option value="null">Select camera</option>
+                <option
+                    *ngFor="let camera of cameras; let $$index = index;"
+                    [value]="$$index"
+                    [selected]="camera.selected === true">
+                    {{ camera.name }}
+                </option>
+            </select>
+        </div>
+
+        <vg-mute vgFor="master"></vg-mute>
+        <vg-volume vgFor="master"></vg-volume>
+
+        <vg-fullscreen></vg-fullscreen>
+    </vg-controls>
+
+    <vg-pip *ngIf="selectedCamera.source"
+            (onCloseCam)="selectedCamera = { id: null }"
+            [camera]="selectedCamera">
+    </vg-pip>
+
+    <video id="master"
+           #masterRef
+           [vgMedia]="masterRef"
+           [vgMaster]="true"
+           [src]="masterVideo">
+    </video>
+</vg-player>

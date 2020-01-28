@@ -17,7 +17,15 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "ngx-videogular": [
+        "dist/ngx-videogular"
+      ],
+      "ngx-videogular/*": [
+        "dist/ngx-videogular/*"
+      ]
+    }
   },
   "angularCompilerOptions": {
     "fullTemplateTypeCheck": true,

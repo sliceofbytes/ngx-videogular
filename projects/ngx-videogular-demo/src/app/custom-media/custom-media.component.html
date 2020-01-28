@@ -1,0 +1,27 @@
+<vg-player>
+    <vg-controls>
+        <vg-play-pause></vg-play-pause>
+
+        <vg-time-display vgProperty="current"></vg-time-display>
+
+        <vg-scrub-bar>
+            <vg-scrub-bar-current-time></vg-scrub-bar-current-time>
+        </vg-scrub-bar>
+
+        <vg-time-display vgProperty="total"></vg-time-display>
+
+        <div class="duration-control fa fa-clock-o">
+            <ul class="durations">
+                <li class="duration-option"
+                    *ngFor="let dur of durations"
+                    (click)="duration = dur">
+                    {{ dur }}s
+                </li>
+            </ul>
+        </div>
+
+        <vg-fullscreen></vg-fullscreen>
+    </vg-controls>
+
+    <app-svg-viewer #svgRef id="timer" [vgMedia]="svgRef" [src]="source" [duration]="duration"></app-svg-viewer>
+</vg-player>
