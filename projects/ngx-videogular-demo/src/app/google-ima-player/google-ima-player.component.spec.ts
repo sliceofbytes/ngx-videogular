@@ -1,8 +1,5 @@
-/* tslint:disable:no-unused-variable */
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { By } from '@angular/platform-browser';
-import { DebugElement } from '@angular/core';
-
+import { VgOverlayPlayModule, VgCoreModule, VgControlsModule, VgImaAdsModule } from 'ngx-videogular';
 import { GoogleImaPlayerComponent } from './google-ima-player.component';
 
 describe('GoogleImaPlayerComponent', () => {
@@ -11,6 +8,7 @@ describe('GoogleImaPlayerComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      imports: [VgOverlayPlayModule, VgCoreModule, VgControlsModule, VgImaAdsModule],
       declarations: [ GoogleImaPlayerComponent ]
     })
     .compileComponents();

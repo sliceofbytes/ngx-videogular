@@ -1,8 +1,6 @@
-/* tslint:disable:no-unused-variable */
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { By } from '@angular/platform-browser';
-import { DebugElement } from '@angular/core';
-
+import { FormsModule } from '@angular/forms';
+import { VgControlsModule, VgCoreModule, VgBufferingModule, VgOverlayPlayModule, VgStreamingModule } from 'ngx-videogular';
 import { StreamingPlayerComponent } from './streaming-player.component';
 
 describe('StreamingPlayerComponent', () => {
@@ -11,7 +9,8 @@ describe('StreamingPlayerComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ StreamingPlayerComponent ]
+      declarations: [ StreamingPlayerComponent ],
+      imports: [ VgControlsModule, VgCoreModule, VgBufferingModule, VgOverlayPlayModule, VgStreamingModule, FormsModule ]
     })
     .compileComponents();
   }));

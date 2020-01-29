@@ -1,8 +1,39 @@
 {
   "name": "ngx-videogular",
-  "version": "0.0.1",
+  "version": "8.2.14",
+   "description": "Videogular is a video application framework for desktop and mobile powered by Angular",
+   "repository": {
+     "type": "git",
+     "url": "https://github.com/sliceofbytes/ngx-videogular"
+   },
   "peerDependencies": {
     "@angular/common": "^8.2.14",
     "@angular/core": "^8.2.14"
-  }
+  },
+  "keywords": [
+    "video",
+    "player",
+    "framework",
+    "angular2",
+    "javascript"
+  ],
+   "author": "Raúl Jiménez <elecash@gmail.com>",
+   "contributors": [{
+       "name": "Alberto García",
+       "email": "cernhelm@gmail.com"
+     },
+     {
+       "name": "Joan Llenas Masó",
+       "email": "joan.llenas.maso@gmail.com"
+     },
+     {
+       "name": "Eric Solari",
+       "email": "ericasolari@gmail.com"
+     }
+   ],
+   "license": "MIT",
+   "bugs": {
+     "url": "https://github.com/sliceofbytes/ngx-videogular/issues"
+   },
+   "homepage": "http://videogular.com"
 }

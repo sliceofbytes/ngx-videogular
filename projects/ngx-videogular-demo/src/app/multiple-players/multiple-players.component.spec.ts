@@ -1,8 +1,5 @@
-/* tslint:disable:no-unused-variable */
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { By } from '@angular/platform-browser';
-import { DebugElement } from '@angular/core';
-
+import { VgOverlayPlayModule, VgCoreModule, VgControlsModule, VgBufferingModule } from 'ngx-videogular';
 import { MultiplePlayersComponent } from './multiple-players.component';
 
 describe('MultiplePlayersComponent', () => {
@@ -11,6 +8,7 @@ describe('MultiplePlayersComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      imports: [VgOverlayPlayModule, VgCoreModule, VgControlsModule, VgBufferingModule],
       declarations: [ MultiplePlayersComponent ]
     })
     .compileComponents();

@@ -1,12 +1,15 @@
-<h1 class="twitter">{{ camera.twitter }}</h1>
+<ng-container *ngIf="camera">
+  <h1  class="twitter">{{ camera.twitter }}</h1>
 
-<video #pipRef
-       [vgMedia]="pipRef"
-       [src]="camera.source"
-       id="slaveVideo"
-       preload="auto"
-       playsinline
-       crossorigin
-       [volume]="0"
-       (click)="onClickCam()">
-</video>
+  <video #pipRef
+        [vgMedia]="pipRef"
+        [src]="camera.source"
+        id="slaveVideo"
+        preload="auto"
+        playsinline
+        crossorigin
+        [volume]="0"
+        (click)="onClickCam()">
+  </video>
+</ng-container>
+

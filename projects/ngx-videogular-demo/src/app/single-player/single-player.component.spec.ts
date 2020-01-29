@@ -1,8 +1,5 @@
-/* tslint:disable:no-unused-variable */
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { By } from '@angular/platform-browser';
-import { DebugElement } from '@angular/core';
-
+import { VgOverlayPlayModule, VgCoreModule, VgControlsModule, VgBufferingModule } from 'ngx-videogular';
 import { SinglePlayerComponent } from './single-player.component';
 
 describe('SinglePlayerComponent', () => {
@@ -11,6 +8,7 @@ describe('SinglePlayerComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      imports: [ VgOverlayPlayModule, VgCoreModule, VgControlsModule, VgBufferingModule ],
       declarations: [ SinglePlayerComponent ]
     })
     .compileComponents();

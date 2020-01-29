@@ -1,8 +1,5 @@
-/* tslint:disable:no-unused-variable */
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { By } from '@angular/platform-browser';
-import { DebugElement } from '@angular/core';
-
+import { VgControlsModule, VgCoreModule } from 'ngx-videogular';
 import { AudioPlayerComponent } from './audio-player.component';
 
 describe('AudioPlayerComponent', () => {
@@ -11,7 +8,8 @@ describe('AudioPlayerComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ AudioPlayerComponent ]
+      declarations: [ AudioPlayerComponent ],
+      imports: [VgControlsModule, VgCoreModule]
     })
     .compileComponents();
   }));

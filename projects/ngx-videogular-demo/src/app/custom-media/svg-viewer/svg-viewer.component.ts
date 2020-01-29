@@ -2,9 +2,8 @@ import { Component, OnInit, ElementRef, Input, SimpleChanges, OnDestroy, OnChang
 import { IPlayable, IMediaSubscriptions } from 'ngx-videogular';
 import { VgStates, VgEvents, VgMediaElement } from 'ngx-videogular';
 import { Subscription, Observable, timer } from 'rxjs';
+import * as Vivus from 'vivus';
 
-
-export declare let Vivus;
 
 // tslint:disable:no-string-literal
 @Component({
@@ -60,7 +59,6 @@ export class SvgViewerComponent extends VgMediaElement implements OnInit, OnDest
             this.time.current = 0;
             this.time.total = this.duration;
             this.buffer.end = this.duration;
-            this.buffered.end = end => this.duration;
 
             this.elem.dispatchEvent(new CustomEvent(VgEvents.VG_LOADED_METADATA));
             this.elem.dispatchEvent(new CustomEvent(VgEvents.VG_CAN_PLAY));

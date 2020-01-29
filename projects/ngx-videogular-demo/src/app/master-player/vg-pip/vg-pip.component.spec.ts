@@ -1,5 +1,5 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { VgOverlayPlayModule, VgCoreModule, VgControlsModule } from 'ngx-videogular';
 import { VgPipComponent } from './vg-pip.component';
 
 describe('VgPipComponent', () => {
@@ -8,6 +8,7 @@ describe('VgPipComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      imports: [ VgOverlayPlayModule, VgCoreModule, VgControlsModule ],
       declarations: [ VgPipComponent ]
     })
     .compileComponents();

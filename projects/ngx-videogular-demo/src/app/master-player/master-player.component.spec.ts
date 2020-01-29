@@ -1,8 +1,7 @@
-/* tslint:disable:no-unused-variable */
+import { VgPipComponent } from './vg-pip/vg-pip.component';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { By } from '@angular/platform-browser';
-import { DebugElement } from '@angular/core';
-
+import { FormsModule } from '@angular/forms';
+import { VgOverlayPlayModule, VgCoreModule, VgControlsModule } from 'ngx-videogular';
 import { MasterPlayerComponent } from './master-player.component';
 
 describe('MasterPlayerComponent', () => {
@@ -11,7 +10,8 @@ describe('MasterPlayerComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ MasterPlayerComponent ]
+      imports: [ VgOverlayPlayModule, VgCoreModule, VgControlsModule, FormsModule ],
+      declarations: [ MasterPlayerComponent , VgPipComponent ]
     })
     .compileComponents();
   }));

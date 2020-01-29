@@ -1,5 +1,6 @@
+import { SvgViewerComponent } from './svg-viewer/svg-viewer.component';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { VgControlsModule, VgCoreModule } from 'ngx-videogular';
 import { CustomMediaComponent } from './custom-media.component';
 
 describe('CustomMediaComponent', () => {
@@ -8,7 +9,8 @@ describe('CustomMediaComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ CustomMediaComponent ]
+      declarations: [ CustomMediaComponent, SvgViewerComponent ],
+      imports: [VgControlsModule, VgCoreModule]
     })
     .compileComponents();
   }));

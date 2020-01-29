@@ -1,8 +1,6 @@
-/* tslint:disable:no-unused-variable */
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { By } from '@angular/platform-browser';
-import { DebugElement } from '@angular/core';
-
+import { FormsModule } from '@angular/forms';
+import { VgOverlayPlayModule, VgCoreModule, VgControlsModule } from 'ngx-videogular';
 import { BoundPlayerComponent } from './bound-player.component';
 
 describe('BoundPlayerComponent', () => {
@@ -11,7 +9,8 @@ describe('BoundPlayerComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ BoundPlayerComponent ]
+      declarations: [ BoundPlayerComponent ],
+      imports: [VgOverlayPlayModule, VgCoreModule, VgControlsModule, FormsModule]
     })
     .compileComponents();
   }));

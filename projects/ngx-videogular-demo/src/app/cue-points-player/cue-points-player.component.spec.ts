@@ -1,16 +1,14 @@
-/* tslint:disable:no-unused-variable */
+import { FormsModule } from '@angular/forms';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { By } from '@angular/platform-browser';
-import { DebugElement } from '@angular/core';
-
 import { CuePointsPlayerComponent } from './cue-points-player.component';
-
+import { VgOverlayPlayModule, VgCoreModule, VgControlsModule } from 'ngx-videogular';
 describe('CuePointsPlayerComponent', () => {
   let component: CuePointsPlayerComponent;
   let fixture: ComponentFixture<CuePointsPlayerComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      imports: [FormsModule, VgOverlayPlayModule, VgCoreModule, VgControlsModule],
       declarations: [ CuePointsPlayerComponent ]
     })
     .compileComponents();
