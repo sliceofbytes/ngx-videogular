@@ -4,9 +4,7 @@ addons:
 language: node_js
 node_js:
 - '11.0'
-branches:
-  only:
-  - master
+all_branches: true,
 before_script:
 - npm install -g @angular/cli
 script:
