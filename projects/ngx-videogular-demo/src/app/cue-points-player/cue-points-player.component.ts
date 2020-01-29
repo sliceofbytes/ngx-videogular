@@ -21,6 +21,11 @@ export interface IWikiCue {
     href: string;
 }
 
+export interface ISource {
+  src: string;
+  type: string;
+}
+
 // tslint:disable:max-line-length
 @Component({
     selector: 'app-cue-points-player',
@@ -28,7 +33,7 @@ export interface IWikiCue {
     styleUrls: [ './cue-points-player.component.scss' ]
 })
 export class CuePointsPlayerComponent implements OnInit {
-    sources: Array<object>;
+    sources: Array<ISource>;
     activeCuePoints: ICuePoint[] = [];
     api: VgAPI;
     track: TextTrack;

@@ -1,3 +1,4 @@
+import { Subscription } from 'rxjs';
 import { VgScrubBarCuePoints } from './vg-scrub-bar-cue-points';
 import { VgAPI } from '../../../core/services/vg-api';
 import { ElementRef, SimpleChange } from '@angular/core';
@@ -83,9 +84,13 @@ describe('Scrub bar current time', () => {
   });
 
   it('Should do nothing if there are no cue points', () => {
+
+    const ucspy = spyOn(scrubBarCuePoints, 'updateCuePoints');
     scrubBarCuePoints.vgCuePoints = null;
     scrubBarCuePoints.onLoadedMetadata();
     scrubBarCuePoints.ngOnChanges({ vgCuePoints: ({ currentValue: null } as SimpleChange) });
+
+    expect(ucspy).not.toHaveBeenCalled();
   });
 
   it('Should handle after view init event', () => {

@@ -6,6 +6,8 @@ describe('Cue points', () => {
   let ref: ElementRef;
 
   beforeEach(() => {
+    // tslint:disable-next-line:no-string-literal
+    window['VTTCue'] = window['VTTCue'] || window['TextTrackCue'] as any;
     ref = {
       nativeElement: document.createElement('div')
     };
@@ -21,14 +23,14 @@ describe('Cue points', () => {
     expect(cuePoints.onLoad$).toBeDefined();
   });
 
-  xit('Should handle enter/exit events', () => {
+  it('Should handle enter/exit events', () => {
 
     const event = {
       target: document.createElement('video')
     };
 
     const track = event.target.addTextTrack('captions', 'test');
-    track.addCue(new TextTrackCue(1, 2, 'cue 1')); // Illegal Constructor
+    track.addCue(new VTTCue(1, 2, 'cue 1')); // Illegal Constructor
 
     cuePoints.onLoad(event);
     expect(cuePoints.onEnter$).toBeDefined();

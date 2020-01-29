@@ -1,0 +1,15 @@
+sudo: required
+addons:
+  chrome: stable
+language: node_js
+node_js:
+- "11.0"
+branches:
+  only:
+    - master
+before_script:
+- npm install -g @angular/cli
+script:
+- npm run test:travis
+- npm run build:travis
+

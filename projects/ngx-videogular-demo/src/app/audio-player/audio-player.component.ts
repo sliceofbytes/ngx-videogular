@@ -1,13 +1,17 @@
 import { Component, OnInit } from '@angular/core';
 
-// tslint:disable:ban-types
+export interface ISource {
+  src: string;
+  type: string;
+}
+
 @Component({
     selector: 'app-audio-player',
     templateUrl: './audio-player.component.html',
     styleUrls: [ './audio-player.component.scss' ]
 })
 export class AudioPlayerComponent implements OnInit {
-    sources: Array<Object>;
+    sources: Array<ISource>;
 
     constructor() {
         this.sources = [

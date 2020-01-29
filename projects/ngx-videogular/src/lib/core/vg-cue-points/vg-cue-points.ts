@@ -31,11 +31,17 @@ export class VgCuePoints implements OnInit, OnDestroy, DoCheck {
   }
 
   onLoad(event: any) {
-    const cues: TextTrackCue[] = event.target.track.cues;
+    if (event.target && event.target.track) {
+      const cues: TextTrackCue[] = event.target.track.cues;
 
-    this.ref.nativeElement.cues = cues;
+      this.ref.nativeElement.cues = cues;
 
-    this.updateCuePoints(cues);
+      this.updateCuePoints(cues);
+    } else if (event.target && event.target.textTracks && event.target.textTracks.length) {
+        const cues: TextTrackCue[] = event.target.textTracks[0].cues;
+        this.ref.nativeElement.cues = cues;
+        this.updateCuePoints(cues);
+    }
   }
 
   updateCuePoints(cues: TextTrackCue[]) {
