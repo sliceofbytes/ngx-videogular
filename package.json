@@ -5,9 +5,9 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build && cp -r ./projects/ngx-videogular/src/fonts ./dist/ngx-videogular",
-    "build:travis": "ng build && cp -r ./projects/ngx-videogular/src/fonts ./dist/ngx-videogular",
+    "build:travis": "ng build ngx-videogular && cp -r ./projects/ngx-videogular/src/fonts ./dist/ngx-videogular",
     "test": "ng test",
-    "test:travis": "ng test --watch=false --browsers=ChromeHeadless",
+    "test:travis": "ng test ngx-videogular --watch=false --browsers=ChromeHeadless",
     "lint": "ng lint",
     "e2e": "ng e2e"
   },
