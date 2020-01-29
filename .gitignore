@@ -35,13 +35,16 @@ speed-measure-plugin*.json
 /.sass-cache
 /connect.lock
 /coverage
+/misc
+misc
 /libpeerconnection.log
 npm-debug.log
 yarn-error.log
 testem.log
 /typings
 coverage-final.json
-
+README.md
+.gitignore
 # System Files
 .DS_Store
 Thumbs.db
