@@ -3,13 +3,23 @@ addons:
   chrome: stable
 language: node_js
 node_js:
-- "11.0"
+- '11.0'
 branches:
   only:
-    - master
+  - master
 before_script:
 - npm install -g @angular/cli
 script:
 - npm run test:travis
 - npm run build:travis
-
+before-deploy:
+- cd dist/ngx-videogular
+deploy:
+  provider: npm
+  email: sliceofbytes@gmail.com
+  skip_cleanup: true
+  api_key:
+    secure: WYbOMGnyz50oL3ih9kRoGsBLySdttKyvIYjWGVeXcJwbF6Nmmgx2EB5jUSQRQcf/4sYFlB8QPwCLnCjfhcGCdHE7RHh6lVW4+QVJ5f20hn/j83qIoQFEZMQV5SBMtKJ5XeK88cGVD96cYYTgu2vH0ixObktS4BKakfecZIBKJAlkqebLxOJuIhlC/wOaCjpAifYhu2SLcQHjfyZyt/W35jYoln7jNtw/3EjgvXrDF5KN8c46uDr6UDlK5juk66r+C1LqRi2LfVgjewXubruGdraukyJqcpejSFWSYNevWPKH9PzIUprEhVZR/u5ogSyNV9ZYdu1Ew5P5BkZ0SOwZna9zoaAVYLfSp7KUeHHfQHYel+9YkrinHWqjUGHytiRVzou63JtnwlRSyEH69J7AqwJNPD3i3q5vDYKmYMXJVRngUqrBmFwL3KH1+p+E3Psp+m9szWKwO2hEf4iwqUbVRgOVnvpjK//3A2VhP+1cKRoBKgXKhhCU90ShENY60tPQtHCucLNvV86kEwdjKfQx57cUXMtsYUo86vJc2dc2zcY0cST10zweMgzto/Ky8LRtMNsmJ5QEUZMvqzUGjOs8sBrZGDW0azEoOqcPm+1TC+Qrjls8z5o6XXl9sAENXYHyjkZgdJuw8vVU/o0LlN0UaxUHGntpd12SKUBFYQQZwwY=
+  on:
+    tags: true
+    repo: sliceofbytes/ngx-videogular
