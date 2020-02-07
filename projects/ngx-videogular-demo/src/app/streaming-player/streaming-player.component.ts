@@ -19,8 +19,8 @@ export interface IMediaStream {
     styleUrls: [ './streaming-player.component.scss' ]
 })
 export class StreamingPlayerComponent implements OnInit {
-    @ViewChild(VgDASH, {static: false}) vgDash: VgDASH;
-    @ViewChild(VgHLS, {static: false}) vgHls: VgHLS;
+    @ViewChild(VgDASH) vgDash: VgDASH;
+    @ViewChild(VgHLS) vgHls: VgHLS;
 
     currentStream: IMediaStream;
     api: VgAPI;

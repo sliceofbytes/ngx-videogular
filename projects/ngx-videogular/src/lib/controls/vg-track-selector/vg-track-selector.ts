@@ -15,7 +15,7 @@ export interface Option {
   template: `
         <div class="container">
             <div class="track-selected"
-                 [class.vg-icon-closed_caption]="!trackSelected">
+                [class.vg-icon-closed_caption]="!trackSelected">
                 {{ trackSelected || '' }}
             </div>
 

@@ -15,7 +15,12 @@
             "tsConfig": "projects/ngx-videogular/tsconfig.lib.json",
             "project": "projects/ngx-videogular/ng-package.json"
           }
-        },
+        ,          "configurations": {
+            "production": {
+              "tsConfig": "projects/ngx-videogular/tsconfig.lib.prod.json"
+            }
+          }
+},
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
