@@ -9,7 +9,8 @@
     "test": "ng test",
     "test:travis": "ng test ngx-videogular --watch=false --browsers=ChromeHeadless",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "postinstall": "ngcc"
   },
   "private": true,
   "dependencies": {
