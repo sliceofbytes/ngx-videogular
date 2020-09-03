@@ -33,9 +33,10 @@ describe('Scrub bar current time', () => {
     const cps: Object = {
       length: 3
     };
-    const cp1: TextTrackCue = ({ startTime: 1 } as TextTrackCue);
-    const cp2: TextTrackCue = ({ startTime: 5, endTime: 10 } as TextTrackCue);
-    const cp3: TextTrackCue = ({ startTime: 15, endTime: 20, text: '{value: \'custom params\'}' } as TextTrackCue);
+  
+    const cp1: TextTrackCue = ({ startTime: 1 } as any);
+    const cp2: TextTrackCue = ({ startTime: 5, endTime: 10 } as any);
+    const cp3: TextTrackCue = ({ startTime: 15, endTime: 20, text: '{value: \'custom params\'}' } as any);
 
     cps[0] = cp1;
     cps[1] = cp2;
@@ -62,7 +63,7 @@ describe('Scrub bar current time', () => {
     };
     const cp1: TextTrackCue = ({ startTime: 1 } as TextTrackCue);
     const cp2: TextTrackCue = ({ startTime: 5, endTime: 10 } as TextTrackCue);
-    const cp3: TextTrackCue = ({ startTime: 15, endTime: 20, text: '{value: \'custom params\'}' } as TextTrackCue);
+    const cp3: TextTrackCue = ({ startTime: 15, endTime: 20, text: '{value: \'custom params\'}' } as any);
 
     cps[0] = cp1;
     cps[1] = cp2;

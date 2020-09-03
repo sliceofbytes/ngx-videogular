@@ -44,7 +44,7 @@ export class BoundPlayerComponent implements OnInit {
                 // Set the video to the beginning
                 this.api.getDefaultMedia().currentTime = 0;
             }
-        );
+        );     
     }
 
     onChangeNativeFs($event) {
