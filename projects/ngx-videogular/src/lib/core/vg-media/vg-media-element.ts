@@ -1,4 +1,5 @@
 import { IMediaElement } from './i-media-element';
+import { AudioTrackList, VideoTrackList } from '../track-types';
 
 export class VgMediaElement implements IMediaElement {
   id: string;

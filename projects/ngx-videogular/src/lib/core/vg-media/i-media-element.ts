@@ -1,3 +1,6 @@
+import {AudioTrackList, VideoTrackList } from '../track-types';
+
+
 export interface IMediaElement {
   /**
    * Returns the id of the element.

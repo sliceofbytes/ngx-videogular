@@ -9,7 +9,6 @@
   "peerDependencies": {
     "@angular/common": "^9.0.0",
     "@angular/core": "^9.0.0",
-    "tslib": "^1.10.0",
     "rxjs": "~6.5.4"
   },
   "keywords": [
@@ -36,6 +35,9 @@
    "license": "MIT",
    "bugs": {
      "url": "https://github.com/sliceofbytes/ngx-videogular/issues"
-   },
+  },
+  "dependencies": {
+    "tslib": "^2.0.0"
+  },
    "homepage": "http://videogular.com"
 }
