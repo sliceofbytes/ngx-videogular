@@ -2,6 +2,8 @@ import { IMediaElement } from './i-media-element';
 import { AudioTrackList, VideoTrackList } from '../track-types';
 
 export class VgMediaElement implements IMediaElement {
+
+ 
   id: string;
   elem: any;
   get audioTracks(): AudioTrackList { return null; }
@@ -11,6 +13,7 @@ export class VgMediaElement implements IMediaElement {
   crossOrigin: string | any;
   currentSrc: string;
   currentTime: number;
+
   defaultMuted: boolean;
   defaultPlaybackRate: number;
   duration: number;

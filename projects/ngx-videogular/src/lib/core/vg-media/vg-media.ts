@@ -390,7 +390,7 @@ export class VgMedia implements OnInit, OnDestroy, IPlayable {
   }
   // @ts-ignore
   onTimeUpdate(event: any) {
-    const end = this.buffered.length - 1;
+    const end = this.buffered?.length - 1;
 
     this.time = {
       current: this.currentTime * 1000,
