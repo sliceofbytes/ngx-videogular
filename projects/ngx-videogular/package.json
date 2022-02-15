@@ -1,14 +1,14 @@
 {
   "name": "ngx-videogular",
-  "version": "11.2.14-0",
+  "version": "13.2.2-0",
    "description": "Videogular is a video application framework for desktop and mobile powered by Angular",
    "repository": {
      "type": "git",
      "url": "https://github.com/sliceofbytes/ngx-videogular"
    },
   "peerDependencies": {
-    "@angular/common": "~11.2.14",
-    "@angular/core": "~11.2.14",
+    "@angular/common": "~13.2.2",
+    "@angular/core": "~13.2.2",
     "rxjs": "~6.5.4"
   },
   "keywords": [

@@ -20,6 +20,25 @@ export * from './services/vg-utils';
 export * from './services/vg-controls-hidden';
 export * from './events/vg-events';
 export * from './states/vg-states';
+export * from './vg-media/vg-media';
+export * from '../buffering/vg-buffering';
+export * from '../controls/vg-controls';
+export * from '../controls/vg-fullscreen/vg-fullscreen';
+export * from '../controls/vg-mute/vg-mute';
+export * from '../controls/vg-volume/vg-volume';
+export * from '../controls/vg-play-pause/vg-play-pause';
+export * from '../controls/vg-playback-button/vg-playback-button';
+export * from '../controls/vg-scrub-bar/vg-scrub-bar';
+export * from '../controls/vg-scrub-bar/vg-scrub-bar-buffering-time/vg-scrub-bar-buffering-time';
+export * from '../controls/vg-scrub-bar/vg-scrub-bar-cue-points/vg-scrub-bar-cue-points';
+export * from '../controls/vg-scrub-bar/vg-scrub-bar-current-time/vg-scrub-bar-current-time';
+export * from '../controls/vg-time-display/vg-time-display';
+export * from '../controls/vg-track-selector/vg-track-selector';
+export * from '../controls/vg-quality-selector/vg-quality-selector';
+export * from '../ima-ads/vg-ima-ads';
+export * from '../overlay-play/vg-overlay-play';
+export * from './vg-cue-points/vg-cue-points';
+export * from './vg-player/vg-player';
 
 
 
