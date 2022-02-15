@@ -16,6 +16,6 @@ export class VgPipComponent {
     }
 
     onClickCam() {
-        this.onCloseCam.next();
+        this.onCloseCam.next(0);
     }
 }

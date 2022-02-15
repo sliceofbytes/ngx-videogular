@@ -1,6 +1,6 @@
 import { Component, HostBinding, OnDestroy, OnInit} from '@angular/core';
 import { Subscription } from 'rxjs';
-import { Angulartics2GoogleAnalytics } from 'angulartics2/ga';
+import { Angulartics2GoogleAnalytics } from 'angulartics2';
 import { ActivatedRoute } from '@angular/router';
 
 export interface IVgDemo {
