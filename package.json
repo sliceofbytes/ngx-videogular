@@ -1,6 +1,6 @@
 {
   "name": "ngx-videogular",
-  "version": "13.2.2-2",
+  "version": "13.2.2",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
