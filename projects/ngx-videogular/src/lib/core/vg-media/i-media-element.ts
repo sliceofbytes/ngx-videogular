@@ -1,5 +1,5 @@
 import {AudioTrackList, VideoTrackList } from '../track-types';
-
+import { MSMediaKeyNeededEvent } from './deperecated';
 
 export interface IMediaElement {
   /**

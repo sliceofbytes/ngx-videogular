@@ -1,6 +1,20 @@
 import { IMediaElement } from './i-media-element';
 import { AudioTrackList, VideoTrackList } from '../track-types';
 
+
+
+export interface MSMediaKeyNeededEvent extends Event {
+  readonly initData: Uint8Array | null;
+}
+
+declare var MSMediaKeyNeededEvent: {
+  prototype: MSMediaKeyNeededEvent;
+  new (): MSMediaKeyNeededEvent;
+};
+
+
+
+
 export class VgMediaElement implements IMediaElement {
 
  
