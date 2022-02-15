@@ -9,7 +9,7 @@
   "peerDependencies": {
     "@angular/common": "~13.2.2",
     "@angular/core": "~13.2.2",
-    "rxjs": "~6.5.4"
+    "rxjs": "~7.4.0"
   },
   "keywords": [
     "video",
