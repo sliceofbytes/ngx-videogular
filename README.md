@@ -2,6 +2,10 @@
 
 Updated Videogular for Angular 13+
 
+**npm i ngx-videogular@13.2.4**
+
+---
+
 https://stackblitz.com/edit/sliceofbytes-ngx-videogular-demo
 
 You must change **strictTemplates** in your tsconfig to false or update your html templates.
