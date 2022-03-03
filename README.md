@@ -2,6 +2,13 @@
 
 Updated Videogular for Angular 13+
 
+I will continue to update this and use it in my projects but I do suggest you look at the offical videogular repo now that it is being maintained.
+
+`@videogular/ngx-videogular`
+
+
+
+
 **npm i ngx-videogular@13.2.4**
 
 ---
